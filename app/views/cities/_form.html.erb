@@ -1,0 +1,64 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">City</h5>
+    </div>
+    <div class="card-body border-top">
+        <%= form_with model: @city, class: "form-validate-jquery", local: true do |form| %>
+
+            <div class="mb-3">
+                <%= form.label :country_id, class: "me-4" %>
+                <%= form.collection_select :country_id, Country.all, :id, :name, { prompt: 'Select a Country' }, { id: 'country-select', class: "form-select" } %>
+            </div>
+
+            <div class="mb-3" id="state-field" style="display: none;">
+                <%= form.label :state_id, class: "me-4" %>
+                <%= form.collection_select :state_id, State.all, :id, :name, { prompt: 'Select a State' }, { id: 'state-select', class: "form-select" } %>
+            </div>
+
+            <div class="mb-3">
+                <%= form.label :name, class: "form-label" %>
+                <%= form.text_field :name, required: true, placeholder: "Enter State Name", class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+                <%= form.label :zip, class: "form-label" %>
+                <%= form.text_field :zip, required: true, placeholder: "Enter Zip Code", class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+                <%= form.label :population, class: "form-label" %>
+                <%= form.text_field :population, required: true, placeholder: "Enter Population", class: "form-control" %>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var countrySelect = document.getElementById('country-select');
+                    var stateField = document.getElementById('state-field');
+                    var stateSelect = document.getElementById('state-select');
+                    var states = <%= raw State.all.group_by(&:country_id).to_json %>;
+
+                    countrySelect.addEventListener('change', function() {
+                        var selectedCountryId = this.value;
+                        if (selectedCountryId !== '') {
+                            stateSelect.innerHTML = '';
+                            states[selectedCountryId].forEach(function(state) {
+                                var option = document.createElement('option');
+                                option.value = state.id;
+                                option.text = state.name;
+                                stateSelect.appendChild(option);
+                            });
+                            stateField.style.display = 'block';
+                        } else {
+                            stateField.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+
+            <div class="text-end">
+                <%= form.submit "City Created", class: "btn btn-primary" %>
+            </div>
+
+        <% end %>
+    </div>
+</div>

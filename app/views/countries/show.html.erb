@@ -1,0 +1,14 @@
+<body>
+<strong class="fs-5 me-2"> Name:</strong>
+<%= @country.name %>
+
+<strong class="fs-5 me-2">Code:</strong>
+<%= @country.code %> 
+
+<strong class="fs-5 me-2">Is_active:</strong>
+<%= @country.is_active %>
+
+
+<%= link_to 'Edit', edit_country_path(@country), class:"btn btn-warning" %>
+<%= link_to 'Back', countries_path, class:"btn btn-success ms-4" %>
+</body>

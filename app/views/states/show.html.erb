@@ -1,0 +1,20 @@
+<body>
+  <strong class="fs-5 me-2"> Name:</strong>
+  <%= @state.name %>
+  <br>
+
+  <strong class="fs-5 me-2">Abbreviation:</strong>
+  <%= @state.abbreviation %> 
+  <br>
+
+  <strong class="fs-5 me-2">Capital:</strong>
+  <%= @state.capital %> 
+  <br>
+
+  <strong class="fs-5 me-2">Is_active:</strong>
+  <%= @state.is_active %>
+  <br>
+
+  <%= link_to 'Edit', edit_state_path(@state), class:"btn btn-warning mt-3" %>
+  <%= link_to 'Back', states_path, class:"btn btn-success ms-4 mt-3" %>
+</body>

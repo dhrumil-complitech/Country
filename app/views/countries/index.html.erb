@@ -1,0 +1,24 @@
+
+<div class="content">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="mb-0">Country</h5>
+    </div>
+<div class="text-end">
+  <%= link_to 'New Country', new_country_path, class: "btn btn-primary" %>
+  </div>
+
+    <table id="countries-datatable" class="table " data-source="<%= countries_path(format: :json) %>">
+      <thead>
+        <tr>
+          <th>Country Name</th>
+          <th>Country Code</th>
+          <th>Active</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>

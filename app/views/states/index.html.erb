@@ -1,0 +1,26 @@
+
+<div class="content">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="mb-0">State</h5>
+    </div>
+    <div class="text-end">
+  <%= link_to 'New State', new_state_path, class: "btn btn-primary" %>
+  </div>
+
+     <table id="states-datatable" class="table " data-source="<%= states_path(format: :json) %>">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>State Name</th>
+          <th>State Abbreviation</th>
+          <th>Capital</th>
+          <th>Active</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>

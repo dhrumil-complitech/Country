@@ -1,0 +1,14 @@
+<body>
+<strong class="fs-5 me-2"> Name:</strong>
+<%= @city.name %>
+
+<strong class="fs-5 me-2">Zip:</strong>
+<%= @city.zip %> 
+
+<strong class="fs-5 me-2">Population:</strong>
+<%= @city.population %>
+
+
+<%= link_to 'Edit', edit_city_path(@city), class:"btn btn-warning" %>
+<%= link_to 'Back', cities_path, class:"btn btn-success ms-4" %>
+</body>
