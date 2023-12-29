@@ -6,8 +6,8 @@ class CountriesController < ApplicationController
           format.json { render json: CountryDatatable.new(params) }
         end
       end
-     
       def show
+     
         @country = Country.find(params[:id])
       end
      
@@ -45,7 +45,7 @@ class CountriesController < ApplicationController
      
         redirect_to countries_path
       end
-     
+            
       private
         def country_params
           params.require(:country).permit(:name, :code, :is_active)

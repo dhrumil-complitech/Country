@@ -12,7 +12,7 @@
 
             <div class="mb-3" id="state-field" style="display: none;">
                 <%= form.label :state_id, class: "me-4" %>
-                <%= form.collection_select :state_id, State.all, :id, :name, { prompt: 'Select a State' }, { id: 'state-select', class: "form-select" } %>
+                <%= form.collection_select :state_id, [], :id, :name, { prompt: 'Select a State' }, { id: 'state-select', class: "form-select" } %>
             </div>
 
             <div class="mb-3">
@@ -35,19 +35,23 @@
                     var countrySelect = document.getElementById('country-select');
                     var stateField = document.getElementById('state-field');
                     var stateSelect = document.getElementById('state-select');
-                    var states = <%= raw State.all.group_by(&:country_id).to_json %>;
 
                     countrySelect.addEventListener('change', function() {
                         var selectedCountryId = this.value;
                         if (selectedCountryId !== '') {
-                            stateSelect.innerHTML = '';
-                            states[selectedCountryId].forEach(function(state) {
-                                var option = document.createElement('option');
-                                option.value = state.id;
-                                option.text = state.name;
-                                stateSelect.appendChild(option);
-                            });
-                            stateField.style.display = 'block';
+                            fetch('/states/' + selectedCountryId + '/fetch_states')
+                                .then(response => response.json())
+                                .then(data => {
+                                    stateSelect.innerHTML = '';
+                                    data.states.forEach(function(state) {
+                                        var option = document.createElement('option');
+                                        option.value = state.id;
+                                        option.text = state.name;
+                                        stateSelect.appendChild(option);
+                                    });
+                                    stateField.style.display = 'block';
+                                })
+                                .catch(error => console.error('Error:', error));
                         } else {
                             stateField.style.display = 'none';
                         }
