@@ -17,4 +17,21 @@ class Country < ApplicationRecord
    end
  end
 end
+
+def self.import_from_csv(file)
+  CSV.foreach(file.path, headers: true) do |row|
+    country_attributes = {}
+    
+    row.to_hash.each do |key, value|
+      if Country.column_names.include?(key.downcase) 
+        country_attributes[key.downcase.to_sym] = value
+      end
+    end
+    country = find_or_initialize_by(code: country_attributes[:code])
+    country.update(country_attributes)
+    country.save!
+  end
+end
+
+
 end

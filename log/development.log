@@ -43947,3 +43947,1559 @@ Processing by CountriesController#index as JSON
 Completed 200 OK in 22ms (Views: 13.4ms | ActiveRecord: 5.9ms | Allocations: 6081)
 
 
+Started GET "/countries" for ::1 at 2024-01-09 10:46:59 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1629)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1721)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 4585)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `import_csv_path' for #<ActionView::Base:0x00000000015798>):
+     6:   </div>
+     7:    <%= link_to 'Export CSV', countries_path(format: 'csv'), class: "btn btn-warning me-3", style: 'color:black' %>
+     8:      <%= link_to 'New country', new_country_path, class: "btn btn-warning", style: 'color:black' %>
+     9:      <%= form_tag(import_csv_path, multipart: true) do %>
+    10:         <label for="csv_file" class="btn btn-warning" style="color: black">
+    11:           Import CSV
+    12:           <input type="file" name="csv_file" id="csv_file" accept=".csv" style="display: none;">
+  
+app/views/countries/index.html.erb:9
+Started GET "/countries" for ::1 at 2024-01-09 10:48:10 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1256)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1348)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4038)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `import_csv' for #<ActionView::Base:0x0000000001a3d8>):
+     6:   </div>
+     7:    <%= link_to 'Export CSV', countries_path(format: 'csv'), class: "btn btn-warning me-3", style: 'color:black' %>
+     8:      <%= link_to 'New country', new_country_path, class: "btn btn-warning", style: 'color:black' %>
+     9:      <%= form_tag(import_csv, multipart: true) do %>
+    10:         <label for="csv_file" class="btn btn-warning" style="color: black">
+    11:           Import CSV
+    12:           <input type="file" name="csv_file" id="csv_file" accept=".csv" style="display: none;">
+  
+app/views/countries/index.html.erb:9
+Started GET "/countries" for ::1 at 2024-01-09 10:51:08 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 783)
+  Rendered layouts/_main_navbar.html.erb (Duration: 2.1ms | Allocations: 1279)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.8ms | Allocations: 266)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 35980)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 38687)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704777668666" for ::1 at 2024-01-09 10:51:08 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704777668666"}
+  [1m[36mCountry Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 8.1ms | Allocations: 8623)
+
+
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 10:51:16 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Upload"}
+Redirected to http://localhost:3000/countries
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 542)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 10:51:16 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 467)
+  Rendered layouts/_main_navbar.html.erb (Duration: 3.6ms | Allocations: 1083)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.6ms | Allocations: 74)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 6815)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 7138)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704777676280" for ::1 at 2024-01-09 10:51:16 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704777676280"}
+  [1m[36mCountry Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.1ms | Allocations: 2835)
+
+
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 10:51:17 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Upload"}
+Redirected to http://localhost:3000/countries
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 429)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 10:51:17 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 418)
+  Rendered layouts/_main_navbar.html.erb (Duration: 1.9ms | Allocations: 1067)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 6730)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 7052)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704777677493" for ::1 at 2024-01-09 10:51:17 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704777677493"}
+  [1m[36mCountry Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.7ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 1.5ms | Allocations: 2830)
+
+
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 10:51:24 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00007fb5dadb8a70 @tempfile=#<Tempfile:/tmp/RackMultipart20240109-5148-joa6gs.csv>, @content_type="text/csv", @original_filename="countries-080120241648.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"countries-080120241648.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload"}
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/country.rb:24:in `block in import_from_csv'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 2002)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'active' for Country.):
+  
+app/models/country.rb:25:in `block in import_from_csv'
+app/models/country.rb:22:in `import_from_csv'
+app/controllers/countries_controller.rb:14:in `import_csv'
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704778097670" for ::1 at 2024-01-09 10:58:17 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704778097670"}
+  [1m[36mCountry Count (43.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (1.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 53ms (Views: -1.4ms | ActiveRecord: 53.7ms | Allocations: 5608)
+
+
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 10:58:19 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00007fb5dad88e88 @tempfile=#<Tempfile:/tmp/RackMultipart20240109-5148-lr6z7b.csv>, @content_type="text/csv", @original_filename="countries-080120241648.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"countries-080120241648.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload"}
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/country.rb:24:in `block in import_from_csv'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms | Allocations: 1581)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'active' for Country.):
+  
+app/models/country.rb:25:in `block in import_from_csv'
+app/models/country.rb:22:in `import_from_csv'
+app/controllers/countries_controller.rb:14:in `import_csv'
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704778102610" for ::1 at 2024-01-09 10:58:22 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704778102610"}
+  [1m[36mCountry Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.9ms | Allocations: 2836)
+
+
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 10:58:36 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00007fb5db0a2e98 @tempfile=#<Tempfile:/tmp/RackMultipart20240109-5148-qgu3t8.csv>, @content_type="text/csv", @original_filename="countries-080120241648.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"countries-080120241648.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload"}
+  [1m[36mCountry Load (1.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/country.rb:24:in `block in import_from_csv'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.1ms | Allocations: 1556)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'active' for Country.):
+  
+app/models/country.rb:25:in `block in import_from_csv'
+app/models/country.rb:22:in `import_from_csv'
+app/controllers/countries_controller.rb:14:in `import_csv'
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704778207301" for ::1 at 2024-01-09 11:00:07 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704778207301"}
+  [1m[36mCountry Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 29ms (Views: 13.5ms | ActiveRecord: 8.5ms | Allocations: 8347)
+
+
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 11:00:15 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00007fb5dac6d670 @tempfile=#<Tempfile:/tmp/RackMultipart20240109-5148-9vqb5.csv>, @content_type="text/csv", @original_filename="countries-080120241648.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"countries-080120241648.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload"}
+  [1m[36mCountry Load (1.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.3ms | Allocations: 1698)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'active' for Country.):
+  
+app/models/country.rb:31:in `block in import_from_csv'
+app/models/country.rb:22:in `import_from_csv'
+app/controllers/countries_controller.rb:14:in `import_csv'
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 12:01:10 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00007fb5daf02a48 @tempfile=#<Tempfile:/tmp/RackMultipart20240109-5148-o5kdif.csv>, @content_type="text/csv", @original_filename="countries-080120241648.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"countries-080120241648.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload"}
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IND"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "India"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IND"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (1.9ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-20 08:22:03"], ["updated_at", "2023-12-20 08:22:03"], ["id", 2]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "India"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IND"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "US"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "USA"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "US"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.3ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-21 11:49:13"], ["updated_at", "2023-12-21 11:49:26"], ["id", 3]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "USA"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "US"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "Co"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Country Name"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Co"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.5ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-19 15:08:50"], ["updated_at", "2023-12-21 12:20:34"], ["id", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Country Name"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Co"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "SA"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "South Africa"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "SA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.3ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-22 06:23:05"], ["updated_at", "2023-12-22 06:23:05"], ["id", 4]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "South Africa"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "SA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "UK"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "United Kingdom"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "UK"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.4ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-22 06:28:59"], ["updated_at", "2023-12-22 06:28:59"], ["id", 5]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "United Kingdom"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "UK"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "CA"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Canada "], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CA"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.3ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 07:36:50"], ["updated_at", "2023-12-25 07:36:50"], ["id", 6]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Canada "], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CA"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "NZ"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "New Zealand "], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "NZ"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.3ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 07:39:00"], ["updated_at", "2023-12-25 07:39:00"], ["id", 7]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "New Zealand "], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "NZ"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "BZ"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Brazil"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "BZ"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.4ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 07:39:33"], ["updated_at", "2023-12-25 07:39:33"], ["id", 8]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Brazil"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "BZ"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IR"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Iran"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IR"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.3ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 07:39:56"], ["updated_at", "2023-12-25 07:39:56"], ["id", 9]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Iran"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IR"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "CH"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "China"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CH"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.3ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 07:40:20"], ["updated_at", "2023-12-25 07:40:20"], ["id", 10]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "China"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CH"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IY"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Italy"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IY"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.5ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 07:41:06"], ["updated_at", "2023-12-25 07:41:06"], ["id", 11]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Italy"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IY"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "GEM"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Germany"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "GEM"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.5ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 07:41:39"], ["updated_at", "2023-12-25 07:41:39"], ["id", 12]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Germany"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "GEM"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "FR"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "France"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "FR"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.4ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 07:42:09"], ["updated_at", "2023-12-25 07:42:09"], ["id", 13]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "France"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "FR"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "Po"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Poland"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Po"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.5ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 07:42:41"], ["updated_at", "2023-12-25 07:42:41"], ["id", 14]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Poland"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Po"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "AUS"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Australia"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AUS"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (0.4ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 10:55:31"], ["updated_at", "2023-12-25 10:55:31"], ["id", 15]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Australia"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AUS"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "AG"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) LIMIT $2[0m  [["name", "Argentina"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) LIMIT $2[0m  [["code", "AG"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Create (0.8ms)[0m  [1m[32mINSERT INTO "countries" ("id", "name", "code", "is_active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 16], ["name", "Argentina"], ["code", "AG"], ["is_active", true], ["created_at", "2024-01-09 06:31:10.622152"], ["updated_at", "2024-01-09 06:31:10.622152"]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Argentina"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AG"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+Redirected to http://localhost:3000/countries
+Completed 302 Found in 339ms (ActiveRecord: 105.4ms | Allocations: 108875)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 12:01:10 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 739)
+  Rendered layouts/_main_navbar.html.erb (Duration: 2.4ms | Allocations: 1281)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.6ms | Allocations: 266)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 35953)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.0ms | Allocations: 36913)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704781870932" for ::1 at 2024-01-09 12:01:10 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704781870932"}
+  [1m[36mCountry Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.7ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 1.4ms | Allocations: 3222)
+
+
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 12:01:17 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00007fb5dad8bd18 @tempfile=#<Tempfile:/tmp/RackMultipart20240109-5148-20svsy.csv>, @content_type="text/csv", @original_filename="countries-080120241648.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"countries-080120241648.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload"}
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IND"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "India"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IND"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "India"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IND"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "US"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "USA"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "US"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "USA"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "US"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "Co"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Country Name"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Co"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Country Name"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Co"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "SA"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "South Africa"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "SA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "South Africa"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "SA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "UK"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "United Kingdom"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "UK"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "United Kingdom"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "UK"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "CA"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Canada "], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CA"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Canada "], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CA"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "NZ"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "New Zealand "], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "NZ"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "New Zealand "], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "NZ"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "BZ"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Brazil"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "BZ"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Brazil"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "BZ"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IR"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Iran"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IR"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Iran"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IR"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "CH"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "China"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CH"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "China"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CH"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IY"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Italy"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IY"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Italy"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IY"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "GEM"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Germany"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "GEM"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Germany"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "GEM"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "FR"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "France"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "FR"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "France"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "FR"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "Po"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Poland"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Po"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Poland"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Po"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "AUS"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Australia"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AUS"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Australia"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AUS"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:34:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "AG"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Argentina"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AG"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mCountry Update (2.0ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", nil], ["updated_at", nil], ["id", 16]]
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/country.rb:33:in `block in import_from_csv'
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 50.8ms | Allocations: 74390)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "created_at" of relation "countries" violates not-null constraint
+DETAIL:  Failing row contains (16, Argentina, AG, t, null, null).
+):
+  
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704781946018" for ::1 at 2024-01-09 12:02:26 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704781946018"}
+  [1m[36mCountry Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.1ms | Allocations: 2836)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 12:02:28 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 448)
+  Rendered layouts/_main_navbar.html.erb (Duration: 1.4ms | Allocations: 1083)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6883)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 7205)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704781948426" for ::1 at 2024-01-09 12:02:28 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704781948426"}
+  [1m[36mCountry Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.4ms | Allocations: 2830)
+
+
+Started GET "/countries/16/edit" for ::1 at 2024-01-09 12:02:39 +0530
+Processing by CountriesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mCountry Load (1.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering countries/edit.html.erb within layouts/application
+  Rendered countries/_form.html.erb (Duration: 34.5ms | Allocations: 7983)
+  Rendered countries/edit.html.erb within layouts/application (Duration: 40.1ms | Allocations: 8252)
+  Rendered layouts/_main_navbar.html.erb (Duration: 2.1ms | Allocations: 1082)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 14594)
+Completed 200 OK in 88ms (Views: 64.1ms | ActiveRecord: 1.1ms | Allocations: 15925)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704781964135" for ::1 at 2024-01-09 12:02:44 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704781964135"}
+  [1m[36mCountry Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 1.1ms | Allocations: 2834)
+
+
+Started GET "/countries/15/edit" for ::1 at 2024-01-09 12:02:49 +0530
+Processing by CountriesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mCountry Load (1.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering countries/edit.html.erb within layouts/application
+  Rendered countries/_form.html.erb (Duration: 17.5ms | Allocations: 3564)
+  Rendered countries/edit.html.erb within layouts/application (Duration: 19.7ms | Allocations: 3647)
+  Rendered layouts/_main_navbar.html.erb (Duration: 3.6ms | Allocations: 1073)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 9979)
+Completed 200 OK in 67ms (Views: 51.2ms | ActiveRecord: 1.2ms | Allocations: 10671)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704781971723" for ::1 at 2024-01-09 12:02:51 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704781971723"}
+  [1m[36mCountry Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 1.0ms | Allocations: 2830)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 12:05:51 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 751)
+  Rendered layouts/_main_navbar.html.erb (Duration: 1.6ms | Allocations: 1282)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 1.3ms | Allocations: 266)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 35836)
+Completed 200 OK in 50ms (Views: 43.3ms | ActiveRecord: 0.0ms | Allocations: 38702)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704782151621" for ::1 at 2024-01-09 12:05:51 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704782151621"}
+  [1m[36mCountry Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 30ms (Views: 17.2ms | ActiveRecord: 9.5ms | Allocations: 6099)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 12:06:02 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 752)
+  Rendered layouts/_main_navbar.html.erb (Duration: 2.8ms | Allocations: 1281)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 1.3ms | Allocations: 266)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 35588)
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 38282)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704782162566" for ::1 at 2024-01-09 12:06:02 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704782162566"}
+  [1m[36mCountry Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 26ms (Views: 17.5ms | ActiveRecord: 6.7ms | Allocations: 6035)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 12:06:45 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 745)
+  Rendered layouts/_main_navbar.html.erb (Duration: 2.7ms | Allocations: 1283)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 1.1ms | Allocations: 266)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 107.7ms | Allocations: 35802)
+Completed 200 OK in 113ms (Views: 109.1ms | ActiveRecord: 0.0ms | Allocations: 38504)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704782206141" for ::1 at 2024-01-09 12:06:46 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704782206141"}
+  [1m[36mCountry Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.7ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 26ms (Views: 18.5ms | ActiveRecord: 5.9ms | Allocations: 6076)
+
+
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 12:07:02 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00007fb5dad12f80 @tempfile=#<Tempfile:/tmp/RackMultipart20240109-5148-6ltru.csv>, @content_type="text/csv", @original_filename="countries-080120241648.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"countries-080120241648.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload"}
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IND"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (4.8ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "India"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IND"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "India"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IND"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "US"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (3.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "USA"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "US"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "USA"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "US"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "Co"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Country Name"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Co"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Country Name"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Co"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "SA"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "South Africa"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "SA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "South Africa"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "SA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "UK"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "United Kingdom"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "UK"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "United Kingdom"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "UK"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "CA"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Canada "], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CA"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Canada "], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CA"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "NZ"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "New Zealand "], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "NZ"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "New Zealand "], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "NZ"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "BZ"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Brazil"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "BZ"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Brazil"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "BZ"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (1.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IR"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Iran"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IR"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Iran"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IR"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "CH"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "China"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CH"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "China"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CH"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IY"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Italy"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IY"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Italy"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IY"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "GEM"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Germany"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "GEM"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Germany"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "GEM"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "FR"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "France"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "FR"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "France"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "FR"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "Po"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Poland"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Po"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Poland"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Po"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "AUS"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Australia"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AUS"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Australia"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AUS"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "AG"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Argentina"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AG"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Update (1.3ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", nil], ["updated_at", nil], ["id", 16]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+Completed 500 Internal Server Error in 290ms (ActiveRecord: 59.1ms | Allocations: 74668)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "created_at" of relation "countries" violates not-null constraint
+DETAIL:  Failing row contains (16, Argentina, AG, t, null, null).
+):
+  
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704796105712" for ::1 at 2024-01-09 15:58:25 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704796105712"}
+  [1m[36mCountry Count (30.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 40ms (Views: 1.7ms | ActiveRecord: 37.8ms | Allocations: 5610)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 15:58:41 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 451)
+  Rendered layouts/_main_navbar.html.erb (Duration: 2.2ms | Allocations: 1083)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 6873)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 7195)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704796121929" for ::1 at 2024-01-09 15:58:41 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704796121929"}
+  [1m[36mCountry Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.9ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.5ms | Allocations: 2830)
+
+
+Started POST "/countries/import_csv" for ::1 at 2024-01-09 15:58:48 +0530
+Processing by CountriesController#import_csv as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00007fb5da9eb190 @tempfile=#<Tempfile:/tmp/RackMultipart20240109-5148-j76rmc.csv>, @content_type="text/csv", @original_filename="countries-080120241648.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"countries-080120241648.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload"}
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IND"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "India"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IND"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "India"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IND"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "US"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "USA"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "US"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "USA"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "US"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "Co"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Country Name"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Co"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Country Name"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Co"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "SA"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "South Africa"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "SA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "South Africa"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "SA"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "UK"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "United Kingdom"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "UK"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "United Kingdom"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "UK"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "CA"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Canada "], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CA"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Canada "], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CA"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "NZ"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "New Zealand "], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "NZ"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "New Zealand "], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "NZ"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "BZ"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Brazil"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "BZ"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Brazil"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "BZ"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IR"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Iran"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IR"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Iran"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IR"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "CH"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "China"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CH"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "China"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CH"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "IY"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Italy"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IY"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Italy"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "IY"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "GEM"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Germany"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "GEM"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Germany"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "GEM"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "FR"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "France"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "FR"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "France"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "FR"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "Po"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Poland"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Po"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Poland"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "Po"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "AUS"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Australia"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AUS"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Australia"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCACHE Country Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AUS"], ["id", 15], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "AG"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Argentina"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AG"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Update (0.6ms)[0m  [1m[33mUPDATE "countries" SET "created_at" = $1, "updated_at" = $2 WHERE "countries"."id" = $3[0m  [["created_at", "2023-12-25 10:59:31"], ["updated_at", "2023-12-25 10:59:31"], ["id", 16]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Argentina"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "AG"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Load (1.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."code" = $1 LIMIT $2[0m  [["code", "CL"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:30:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) LIMIT $2[0m  [["name", "Chile"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) LIMIT $2[0m  [["code", "CL"], ["LIMIT", 1]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("id", "name", "code", "is_active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 17], ["name", "Chile"], ["code", "CL"], ["is_active", false], ["created_at", "2023-12-20 08:22:03"], ["updated_at", "2023-12-20 08:22:03"]]
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:31:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."name") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["name", "Chile"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mCountry Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "countries" WHERE LOWER("countries"."code") = LOWER($1) AND "countries"."id" != $2 LIMIT $3[0m  [["code", "CL"], ["id", 17], ["LIMIT", 1]]
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/country.rb:32:in `block in import_from_csv'
+Redirected to http://localhost:3000/countries
+Completed 302 Found in 293ms (ActiveRecord: 78.4ms | Allocations: 82223)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 15:58:49 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 460)
+  Rendered layouts/_main_navbar.html.erb (Duration: 1.7ms | Allocations: 1083)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6883)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 7207)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704796129196" for ::1 at 2024-01-09 15:58:49 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704796129196"}
+  [1m[36mCountry Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 1.2ms | Allocations: 2837)
+
+
+Started GET "/countries/17/edit" for ::1 at 2024-01-09 15:58:55 +0530
+Processing by CountriesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCountry Load (1.1ms)[0m  [1m[34mSELECT "countries".* FROM "countries" WHERE "countries"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/countries_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering countries/edit.html.erb within layouts/application
+  Rendered countries/_form.html.erb (Duration: 18.2ms | Allocations: 4522)
+  Rendered countries/edit.html.erb within layouts/application (Duration: 21.5ms | Allocations: 4788)
+  Rendered layouts/_main_navbar.html.erb (Duration: 3.5ms | Allocations: 1082)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.6ms | Allocations: 74)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 11206)
+Completed 200 OK in 63ms (Views: 46.7ms | ActiveRecord: 1.0ms | Allocations: 12521)
+
+
+Started GET "/countries" for ::1 at 2024-01-09 15:59:00 +0530
+Processing by CountriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering countries/index.html.erb within layouts/application
+  Rendered countries/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 451)
+  Rendered layouts/_main_navbar.html.erb (Duration: 3.5ms | Allocations: 1067)
+  Rendered layouts/_main_slidebar.html.erb (Duration: 0.4ms | Allocations: 74)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 6764)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 7086)
+
+
+Started GET "/countries.json?draw=1&columns%5B0%5D%5Bdata%5D=name&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=code&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=is_active&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=false&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=action&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=0&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1704796140669" for ::1 at 2024-01-09 15:59:00 +0530
+Processing by CountriesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"name", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"code", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"is_active", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"action", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"0", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1704796140669"}
+  [1m[36mCountry Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCACHE Country Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "countries"[0m
+  ↳ app/controllers/countries_controller.rb:6:in `block (2 levels) in index'
+  [1m[36mCountry Load (0.7ms)[0m  [1m[34mSELECT "countries".* FROM "countries" ORDER BY countries.name ASC NULLS LAST LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/country_datatable.rb:28:in `map'
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 1.2ms | Allocations: 2830)
+
+

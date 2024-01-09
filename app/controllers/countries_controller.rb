@@ -5,9 +5,19 @@ class CountriesController < ApplicationController
           format.html
           format.json { render json: CountryDatatable.new(params, view_context: view_context) }
           format.csv { send_data Country.to_csv, filename: "countries-#{DateTime.now.strftime("%d%m%Y%H%M")}.csv"}
- end
-end
-
+       end
+    end
+    
+    def import_csv
+      uploaded_file = params[:csv_file]
+      if uploaded_file.present? && uploaded_file.content_type == 'text/csv'
+        Country.import_from_csv(uploaded_file)
+        flash[:success] = 'CSV file imported successfully.'
+      else
+        flash[:error] = 'Please upload a valid CSV file.'
+      end
+      redirect_to countries_path
+    end
   
       def show
      

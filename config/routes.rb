@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "countries#index"
-  resources :countries
   resources :states 
   resources :cities
+  resources :countries do
+    collection do
+      post 'import_csv'
+    end
+  end
 end
