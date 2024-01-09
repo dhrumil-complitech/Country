@@ -5,35 +5,43 @@
     <div class="card-body border-top">
         <%= form_with model: @state, class: "form-validate-jquery", local: true do |form| %>
 
-            <div class="mb-3">
-                <%= form.label :country_id, "Country", class: "form-label" %>
-                <%= form.collection_select :country_id, Country.all, :id, :name, { prompt: 'Select a country' }, { class: "form-select" } %>
+            <div class="mb-3 row">
+                <%= form.label :country, class: "col-sm-2 col-form-label" %>
+                <div class="col-lg-9">
+                    <%= form.collection_select :country_id, Country.order(:name), :id, :name, { prompt: 'Select a Country' }, { id: 'country-select', class: "form-select" } %>
+                </div>
             </div>
 
-            <div class="mb-3">
-                <%= form.label :name, "State Name", class: "form-label" %>
-                <%= form.text_field :name, required: true, placeholder: "Enter State Name", class: "form-control" %>
+            <div class="mb-3 row">
+                <%= form.label :name, class: "col-sm-2 col-form-label" %>
+                <div class="col-lg-9">
+                    <%= form.text_field :name, class: "form-control" %>
+                </div>
             </div>
 
-            <div class="mb-3">
-                <%= form.label :abbreviation, "Abbreviation Code", class: "form-label" %>
-                <%= form.text_field :abbreviation, required: true, placeholder: "Enter Abbreviation Code", class: "form-control" %>
+            <div class="mb-3 row">
+                <%= form.label :abbreviation, class: "col-sm-2 col-form-label" %>
+                <div class="col-lg-9">
+                    <%= form.text_field :abbreviation, class: "form-control" %>
+                </div>
             </div>
 
-            <div class="mb-3">
-                <%= form.label :capital, "Capital", class: "form-label" %>
-                <%= form.text_field :capital, required: true, placeholder: "Enter Capital", class: "form-control" %>
+            <div class="mb-3 row">
+                <%= form.label :capital, class: "col-sm-2 col-form-label" %>
+                <div class="col-lg-9">
+                    <%= form.text_field :capital, class: "form-control" %>
+                </div>
             </div>
 
-            <div class="mb-3 form-check">
-                <%= form.label :is_active, class: "form-check-label" do %>
-                    <%= form.check_box :is_active, id: "dc_ls_c", class: "form-check-input" %>
-                    Is Active
-                <% end %>
+            <div class="mb-3 row">
+                <%= form.label :active, class: "col-sm-2 col-form-label"  %>
+                <div class="col-lg-9">
+                    <%= form.check_box :is_active, class: "mb-2 form-check-input" %><br>
+                </div>
             </div>
 
-            <div class="text-end">
-                <%= form.submit "State Created", class: "btn btn-primary" %>
+            <div>
+                <%= form.submit "Create State", class: "btn btn-primary mt-2 mb-2" %>
             </div>
 
         <% end %>

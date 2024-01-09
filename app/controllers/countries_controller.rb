@@ -1,11 +1,14 @@
 class CountriesController < ApplicationController
-    def index
-        @countries = Country.all
+    def index    
+       @country = Country.all
         respond_to do |format|
           format.html
-          format.json { render json: CountryDatatable.new(params) }
-        end
-      end
+          format.json { render json: CountryDatatable.new(params, view_context: view_context) }
+          format.csv { send_data Country.to_csv, filename: "countries-#{DateTime.now.strftime("%d%m%Y%H%M")}.csv"}
+ end
+end
+
+  
       def show
      
         @country = Country.find(params[:id])

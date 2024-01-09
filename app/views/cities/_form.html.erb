@@ -1,68 +1,85 @@
-<div class="card">
-    <div class="card-header">
-        <h5 class="mb-0">City</h5>
-    </div>
-    <div class="card-body border-top">
-        <%= form_with model: @city, class: "form-validate-jquery", local: true do |form| %>
+<%= form_with model: @city do |form| %>
+ 
+   <div class="mb-3 row">
+  <%= form.label :country, class:"col-sm-2 col-form-label" %>
+  <div class = "col-lg-9">
+   <%= form.collection_select :country_id, Country.order(:name), :id, :name, { prompt: 'Select a Country' }, {id: 'country-select', class: "form-select" } %>
+  </div>
+  <% @city.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+  </div>
 
-            <div class="mb-3">
-                <%= form.label :country_id, class: "me-4" %>
-                <%= form.collection_select :country_id, Country.all, :id, :name, { prompt: 'Select a Country' }, { id: 'country-select', class: "form-select" } %>
-            </div>
+   <div class="mb-3 row">
+  <%= form.label :state, class:"col-sm-2 col-form-label" %>
+  <div class = "col-lg-9">
+    <%= form.collection_select :state_id, State.order(:name), :id, :name, { prompt: 'Select a State' }, { id: 'state-select', class: "form-select" } %>
+  </div>
+  <% @city.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+  </div>
 
-            <div class="mb-3" id="state-field" style="display: none;">
-                <%= form.label :state_id, class: "me-4" %>
-                <%= form.collection_select :state_id, [], :id, :name, { prompt: 'Select a State' }, { id: 'state-select', class: "form-select" } %>
-            </div>
+   <div class="mb-3 row">
+    <%= form.label :name, class:"col-sm-2 col-form-label" %>
+    <div class = "col-lg-9">
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+    <% @city.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+   <div class="mb-3 row">
+    <%= form.label :zip, class:"col-sm-2 col-form-label" %>
+    <div class = "col-lg-9">
+    <%= form.text_field :zip, class:"form-control" %>
+  </div>
+    <% @city.errors.full_messages_for(:zip).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+   <div class="mb-3 row">
+    <%= form.label :population, class:"col-sm-2 col-form-label" %>
+    <div class = "col-lg-9">
+    <%= form.text_field :population, class:"form-control" %>
+  </div>
+    <% @city.errors.full_messages_for(:population).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
 
-            <div class="mb-3">
-                <%= form.label :name, class: "form-label" %>
-                <%= form.text_field :name, required: true, placeholder: "Enter State Name", class: "form-control" %>
-            </div>
-
-            <div class="mb-3">
-                <%= form.label :zip, class: "form-label" %>
-                <%= form.text_field :zip, required: true, placeholder: "Enter Zip Code", class: "form-control" %>
-            </div>
-
-            <div class="mb-3">
-                <%= form.label :population, class: "form-label" %>
-                <%= form.text_field :population, required: true, placeholder: "Enter Population", class: "form-control" %>
-            </div>
-
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    var countrySelect = document.getElementById('country-select');
-                    var stateField = document.getElementById('state-field');
-                    var stateSelect = document.getElementById('state-select');
-
-                    countrySelect.addEventListener('change', function() {
-                        var selectedCountryId = this.value;
-                        if (selectedCountryId !== '') {
-                            fetch('/states/' + selectedCountryId + '/fetch_states')
-                                .then(response => response.json())
-                                .then(data => {
-                                    stateSelect.innerHTML = '';
-                                    data.states.forEach(function(state) {
-                                        var option = document.createElement('option');
-                                        option.value = state.id;
-                                        option.text = state.name;
-                                        stateSelect.appendChild(option);
-                                    });
-                                    stateField.style.display = 'block';
-                                })
-                                .catch(error => console.error('Error:', error));
-                        } else {
-                            stateField.style.display = 'none';
-                        }
-                    });
-                });
-            </script>
-
-            <div class="text-end">
-                <%= form.submit "City Created", class: "btn btn-primary" %>
-            </div>
-
-        <% end %>
-    </div>
-</div>
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+     $(document).ready(function() {
+     $('#country-select').change(function() {
+       var selectedCountryId = $(this).val();
+       var stateField = $('#state-field');
+       var stateSelect = $('#state-select');
+       if (selectedCountryId !== '') {
+          $.ajax({
+            url: '/states/' + selectedCountryId + '/fetch_states',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+              stateSelect.empty();
+              $.each(data.states, function(index, state) {
+                stateSelect.append('<option value="' + state.id + '">' + state.name + '</option>');
+              });
+                  stateField.show();
+            },
+                error: function(error) {
+                console.error('Error:', error);
+                }
+              });
+            } else {
+                stateSelect.empty();
+                stateField.hide();
+              }
+            });
+          });
+ </script>
+  <div>
+    <%= form.submit"Create City", class:"btn btn-primary mt-2 mb-2" %>
+  </div>
+<% end %>

@@ -1,26 +1,30 @@
-
 <div class="content">
-  <div class="card">
-    <div class="card-header">
-      <h5 class="mb-0">City</h5>
-    </div>
-<div class="text-end">
-  <%= link_to 'New City', new_city_path, class: "btn btn-primary" %>
+<div class="card">
+  <div class="card-header d-md-flex">
+     <h5 class="mb-0">City</h5>
+     <div class="collapse d-lg-block my-lg-auto ms-lg-auto">
+
+   <%= link_to 'Export CSV', cities_path(format: 'csv'), class: "btn btn-warning me-3", style: 'color:black' %>
+      <%= link_to 'New City', new_city_path, class: "btn btn-warning", style: 'color:black' %>
+     </div>
   </div>
-    <table id="cities-datatable" class="table " data-source="<%= cities_path(format: :json) %>">
-      <thead>
-        <tr>
-          <th>City Country</th>
-           <th>City State</th>
-           <th>City Name</th>
-            <th>City Zip</th>
-          <th>City Population</th>
-          <th class="text-center">Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-      </tbody>
-    </table>
-  </div>
+<table class="table" id="cities-datatable" data-source="<%= cities_path(format: :json) %>">
+ <thead>
+  <tr>
+   <th>Country</th>
+    <th>State</th>
+     <th>City</th>
+    <th>Zip</th>
+    <th>Population</th>
+<div class="text-center">
+    <th>Actions</th>
+<div>
+  </tr>
+ </thead>
+
+ <tbody>
+
+ </tbody>
+</table>
+</div>
 </div>

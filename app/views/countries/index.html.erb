@@ -1,24 +1,28 @@
-
 <div class="content">
-  <div class="card">
-    <div class="card-header">
-      <h5 class="mb-0">Country</h5>
+<div class="card">
+  <div class="card-header d-md-flex ">
+    <h5 class="mb-0">Country</h5>
+    <div class="collapse d-lg-block my-lg-auto ms-lg-auto">
+  </div>
+   <%= link_to 'Export CSV', countries_path(format: 'csv'), class: "btn btn-warning me-3", style: 'color:black' %>
+     <%= link_to 'New country', new_country_path, class: "btn btn-warning", style: 'color:black' %>
     </div>
-<div class="text-end">
-  <%= link_to 'New Country', new_country_path, class: "btn btn-primary" %>
   </div>
+   
+<table class="table" id="countries-datatable" data-source="<%= countries_path(format: :json) %>">
+ <thead>
+  <tr>
+    <th>Name</th>
+     <th>Code</th>
+    <th>Active</th>
+    <div class="text-center">
+    <th>Actions</th>
+    </div>
+  </tr>
+ </thead>
+ <tbody>
+ </tbody>
+</table>
+</div>
 
-    <table id="countries-datatable" class="table " data-source="<%= countries_path(format: :json) %>">
-      <thead>
-        <tr>
-          <th>Country Name</th>
-          <th>Country Code</th>
-          <th>Active</th>
-          <th class="text-center">Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </div>
 </div>

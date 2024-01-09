@@ -1,29 +1,33 @@
-<div class="card">
-    <div class="card-header">
-        <h5 class="mb-0">Country</h5>
-    </div>
-    <div class="card-body border-top">
-        <%= form_with model:@country, class: "form-validate-jquery", local: true do |form| %>
+<%= form_with model: @city do |form| %>
+   <div class="mb-3 row">
+    <%= form.label :name, class:"col-sm-2 col-form-label" %>
+    <div class = "col-lg-9">
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+    <% @country.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+   <div class="mb-3 row">
+    <%= form.label :code, class:"col-sm-2 col-form-label" %>
+    <div class = "col-lg-9">
+    <%= form.text_field :code, class:"form-control" %>
+  </div>
+    <% @country.errors.full_messages_for(:code).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+   <div class="mb-3 row">
+    <%= form.label :active, class:"col-sm-2 col-form-label"  %>
+    <div class = "col-lg-9">
+    <%= form.check_box :is_active, class:"mb-2 form-check-input" %><br>
+  </div>
+    <% @country.errors.full_messages_for(:is_active).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
 
-            <div class="mb-3">
-                <%= form.label :name, class: "form-label" %>
-                <%= form.text_field :name, required: true, placeholder: "Enter Country Name", class: "form-control" %>
-            </div>
-
-            <div class="mb-3">
-                <%= form.label :code, class: "form-label" %>
-                <%= form.text_field :code, required: true, placeholder: "Enter Country Code", class: "form-control" %>
-            </div>
-
-            <div class="mb-3">
-            <%= form.label :is_active, class: "form-check-label mb-2" %>
-              <%= form.check_box :is_active, id: "dc_ls_c", class: "form-check-input" %> 
-            </div>
-
-            <div class="text-end">
-                <%= form.submit "Country Created", class: "btn btn-primary" %>
-            </div>
-
-        <% end %>
-    </div>
-</div>
+  <div>
+    <%= form.submit"Create City", class:"btn btn-primary mt-2 mb-2" %>
+  </div>
+<% end %>

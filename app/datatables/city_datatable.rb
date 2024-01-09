@@ -1,5 +1,13 @@
 class CityDatatable < AjaxDatatablesRails::ActiveRecord
-  self.nulls_last = true
+  extend Forwardable
+   def_delegator :@view, :city_path
+   def_delegator :@view, :edit_city_path
+   self.nulls_last = true
+
+  def initialize(params, opts = {})
+    @view = opts[:view_context]
+    super
+  end
   def view_columns
     # Declare strings in this format: ModelName.column_name
     # or in aliased_join_table.column_name format
@@ -41,31 +49,19 @@ class CityDatatable < AjaxDatatablesRails::ActiveRecord
 
   def action(record)
     html = <<-HTML
-      <div class="d-inline-flex">
-        <div class="dropdown">
-          <a href="#" class="text-body" data-bs-toggle="dropdown">
-            <i class="ph-list"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-end">
-            <a href="#{city_path(record)}" class="dropdown-item">Show</a>
-            <a href="#{edit_city_path(record)}" class="dropdown-item">Edit</a>
-            <a href="#{city_path(record)}" class="dropdown-item" onclick="return confirm('Are you sure?');" data-turbo-confirm="Are you sure?" data-turbo-method="delete" data-method="delete">Destroy</a>
-          </div>
-        </div>
-      </div>
-    HTML
-    html.html_safe
-  end
-  
-  private
-  
-  def city_path(record)
-  
-    "/cities/#{record.id}"
-  end
-  
-  def edit_city_path(record)
-    "/cities/#{record.id}/edit"
-  end
-
+    <div class="d-inline-flex">
+    <div class="dropdown">
+     <a href="#" class="text-body" data-bs-toggle="dropdown">
+       <i class="ph-list"></i>
+     </a>
+     <div class="dropdown-menu dropdown-menu-end">
+       <a href="#{city_path(record)}" class="dropdown-item">Show</a>
+       <a href="#{edit_city_path(record)}" class="dropdown-item">Edit</a>
+       <a href="#{city_path(record)}" class="dropdown-item" onclick="return confirm('Are you sure?');" data-turbo-confirm="Are you sure?" data-turbo-method="delete" data-method="delete">Destroy</a>
+     </div>
+    </div>
+    </div>
+     HTML
+     html.html_safe
+   end
 end
